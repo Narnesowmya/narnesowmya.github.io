@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N. Sri Sowmya | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid #1e293b;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: #38bdf8; }
+
+    .logo { font-weight: 600; }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 120px 20px 80px;
+    }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero span {
+      color: #38bdf8;
+      font-weight: 500;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      max-width: 600px;
+      color: #cbd5f5;
+    }
+
+    .hero-links {
+      margin-top: 25px;
+    }
+
+    .hero-links a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 10px 18px;
+      border: 1px solid #38bdf8;
+      border-radius: 25px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .hero-links a:hover {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    .profile-img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 10px 40px rgba(56,189,248,0.35);
+    }
+
+    /* SECTIONS */
+    .section-title {
+      color: #38bdf8;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .card h4 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero h2 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">N. Sri Sowmya</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="hero">
+    <div>
+      <h2>Hello, It's Me</h2>
+      <h1>N. Sri Sowmya</h1>
+      <h2>And I'm an <span id="typing"></span></h2>
+
+      <p>
+        I am a passionate B.Tech student specializing in Computer Science Engineering (AI & ML),
+        interested in data analytics and machine learning.
+      </p>
+
+      <div class="hero-links">
+        <a href="Sri_Sowmya_Resume.pdf" target="_blank">Download Resume</a>
+        <a href="https://github.com/Narnesowmya" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/narne-sri-sowmya-1ab7b0260" target="_blank">LinkedIn</a>
+        <a href="mailto:srisowmyanarne@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <img src="profile.jpg" alt="N. Sri Sowmya" class="profile-img">
+  </div>
+</section>
+
+<section id="about">
+  <h3 class="section-title">About Me</h3>
+  <p>
+    I am a B.Tech student in Computer Science (AI & ML) with a strong foundation in Python,
+    data analysis, and problem solving. I enjoy applying my skills to real-world projects.
+  </p>
+</section>
+
+<section id="skills">
+  <h3 class="section-title">Skills</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Data Analytics</h4>
+      <p>Python, SQL, Pandas, NumPy, Power BI, Tableau, Excel</p>
+    </div>
+    <div class="card">
+      <h4>Machine Learning</h4>
+      <p>Scikit-learn, TensorFlow (Basics)</p>
+    </div>
+    <div class="card">
+      <h4>Tools</h4>
+      <p>Git, GitHub, Jupyter Notebook, VS Code</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h3 class="section-title">Projects</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>YouTube Engagement Analysis</h4>
+      <p>Analyzed likes, comments, and views to understand engagement trends.</p>
+    </div>
+    <div class="card">
+      <h4>Breast Cancer Prediction</h4>
+      <p>Built and deployed a machine learning model using Streamlit.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3 class="section-title">Contact</h3>
+  <p>Email: srisowmyanarne@gmail.com</p>
+  <p>Location: Guntur, India</p>
+</section>
+
+<footer>
+  <p>© 2026 N. Sri Sowmya</p>
+</footer>
+
+<script>
+  const roles = ["Aspiring Data Analyst", "AI / ML Engineer"];
+  let roleIndex = 0;
+  let charIndex = 0;
+  const typingElement = document.getElementById("typing");
+
+  function typeEffect() {
+    if (charIndex < roles[roleIndex].length) {
+      typingElement.textContent += roles[roleIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 120);
+    } else {
+      setTimeout(() => {
+        typingElement.textContent = "";
+        charIndex = 0;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeEffect();
+      }, 1500);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+</body>
+</html>
