@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>N. Sri Sowmya | Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
       scroll-behavior: smooth;
     }
 
+    /* NAVBAR */
     header {
       position: fixed;
       top: 0;
@@ -50,6 +51,14 @@
       max-width: 1100px;
       margin: auto;
       padding: 120px 20px 80px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* HERO */
@@ -93,7 +102,7 @@
 
     .hero-links a {
       display: inline-block;
-      margin-right: 15px;
+      margin-right: 12px;
       padding: 10px 18px;
       border: 1px solid #38bdf8;
       border-radius: 25px;
@@ -134,6 +143,11 @@
       border: 1px solid #1e293b;
       padding: 25px;
       border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
     }
 
     .card h4 {
@@ -170,7 +184,7 @@
   </nav>
 </header>
 
-<section id="home">
+<section id="home" class="show">
   <div class="hero">
     <div>
       <h2>Hello, It's Me</h2>
@@ -178,7 +192,7 @@
       <h2>And I'm an <span id="typing"></span></h2>
 
       <p>
-        I am a passionate B.Tech student specializing in Computer Science Engineering (AI & ML),
+        Passionate B.Tech student specializing in Computer Science Engineering (AI & ML),
         interested in data analytics and machine learning.
       </p>
 
@@ -197,9 +211,39 @@
 <section id="about">
   <h3 class="section-title">About Me</h3>
   <p>
-    I am a B.Tech student in Computer Science (AI & ML) with a strong foundation in Python,
-    data analysis, and problem solving. I enjoy applying my skills to real-world projects.
+    Passionate B.Tech student specializing in Computer Science Engineering (AI & ML)
+    with a strong foundation in programming and Python.
   </p>
+
+  <p style="margin-top:12px;">
+    Eager to explore emerging technologies and apply my expertise in real-world projects.
+    Currently seeking internship opportunities.
+  </p>
+
+  <h3 class="section-title" style="margin-top:40px;">Education</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>B.Tech in CSE (AI & ML)</h4>
+      <p>VVIT</p>
+      <p>2022 – 2026</p>
+    </div>
+    <div class="card">
+      <h4>Intermediate</h4>
+      <p>Sri Chaitanya Junior College</p>
+      <p>2020 – 2022</p>
+    </div>
+    <div class="card">
+      <h4>CBSE</h4>
+      <p>Sri Chaitanya International School</p>
+    </div>
+  </div>
+
+  <h3 class="section-title" style="margin-top:40px;">Hobbies & Interests</h3>
+  <div class="grid">
+    <div class="card">🎵 Listening to music</div>
+    <div class="card">📚 Reading self-help & fiction</div>
+    <div class="card">📱 Mobile photography</div>
+  </div>
 </section>
 
 <section id="skills">
@@ -245,6 +289,7 @@
 </footer>
 
 <script>
+  /* Typing Effect */
   const roles = ["Aspiring Data Analyst", "AI / ML Engineer"];
   let roleIndex = 0;
   let charIndex = 0;
@@ -266,7 +311,21 @@
   }
 
   document.addEventListener("DOMContentLoaded", typeEffect);
+
+  /* Scroll animation */
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
 </script>
 
 </body>
 </html>
+
